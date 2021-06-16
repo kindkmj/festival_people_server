@@ -15,7 +15,7 @@ public class Security extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()//보호된 리소스 URI에 접근할 수 있는 권한을 설정
-//                .antMatchers("/test*/**").permitAll() //전체 접근 허용
+                .antMatchers("/test*/**").permitAll() //전체 접근 허용
                 .antMatchers("/logout/**").permitAll()
 //                .antMatchers("/myPage").hasRole("ADMIN")//admin이라는 롤을 가진 사용자만 접근 허용
                 .anyRequest()
